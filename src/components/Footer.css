@@ -1,0 +1,134 @@
+.footer {
+  background: linear-gradient(to right, #2c5834, #4a8b3d);
+  color: #ffffff;
+  padding: 0.1rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/public/fondoplanta.jpg') center/cover;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #9dff8d;
+  padding: 2px;
+}
+
+.company-name {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #9dff8d;
+}
+
+.contact-info h4,
+.social-media h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #9dff8d;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-info h4::after,
+.social-media h4::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #9dff8d, transparent);
+}
+
+.contact-info p {
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  font-size: 1rem;
+  color: #9dff8d;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon {
+  color: #9dff8d;
+  font-size: 0.8rem;
+}
+
+.social-links a:hover {
+  color: #9dff8d;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .company-info {
+    justify-content: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .contact-info p {
+    justify-content: center;
+  }
+}

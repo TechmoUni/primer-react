@@ -1,0 +1,191 @@
+.acerca-container {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
+
+.acerca-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.acerca-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-align: center;
+  position: relative;
+}
+
+.leaf-decoration {
+  width: 50px;
+  height: 50px;
+  background-image: url('/public/hojita.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+.leaf-decoration.right {
+  transform: scaleX(-1);
+}
+
+.acerca-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 4rem;
+}
+
+.acerca-image-container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.acerca-image-container:hover {
+  transform: translateY(-10px);
+}
+
+.acerca-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(76, 175, 80, 0.1), rgba(139, 195, 74, 0.1));
+  pointer-events: none;
+}
+
+.acerca-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mission-box,
+.vision-box,
+.values-box {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.mission-box:hover,
+.vision-box:hover,
+.values-box:hover {
+  transform: translateX(10px);
+}
+
+.acerca-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.acerca-text h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(to right, #4CAF50, #8BC34A);
+}
+
+.acerca-text p {
+  line-height: 1.8;
+  color: #34495e;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.experience-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.experience-card {
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+.experience-card .number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #4CAF50;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.experience-card p {
+  color: #34495e;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 968px) {
+  .acerca-content {
+      grid-template-columns: 1fr;
+  }
+
+  .acerca-image-container {
+      max-width: 600px;
+      margin: 0 auto;
+  }
+
+  .mission-box:hover,
+  .vision-box:hover,
+  .values-box:hover {
+      transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 576px) {
+  .acerca-header {
+      gap: 1rem;
+  }
+
+  .acerca-header h2 {
+      font-size: 2rem;
+  }
+
+  .leaf-decoration {
+      width: 30px;
+      height: 30px;
+  }
+
+  .experience-section {
+      grid-template-columns: 1fr;
+  }
+}

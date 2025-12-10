@@ -1,0 +1,204 @@
+.contactos-container {
+  min-height: 100vh;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+              url('/public/fondo-botanico-leves-verdes_1761.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.leaf-decoration {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-image: url('/public/hojita.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.leaf-decoration.left {
+  left: -100px;
+  top: 10%;
+  transform: rotate(-45deg);
+}
+
+.leaf-decoration.right {
+  right: -100px;
+  bottom: 10%;
+  transform: rotate(135deg);
+}
+
+.contactos-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.contactos-info {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contactos-info h2 {
+  font-family: 'Playfair Display', serif;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.separator {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #4CAF50, #8BC34A);
+  margin: 0 auto 1.5rem;
+}
+
+.contactos-info p {
+  color: #34495e;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contacto-form {
+  display: grid;
+  gap: 2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form-group label {
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+  background: #ffffff;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #95a5a6;
+}
+
+.submit-button {
+  background: linear-gradient(45deg, #4CAF50, #8BC34A);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.submit-button:disabled {
+  background: #bdc3c7;
+  transform: none;
+  cursor: not-allowed;
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  background-color: #ffeaea;
+  color: #e74c3c;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #fadbd8;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  color: #2ecc71;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #a8e6cf;
+}
+
+@media (max-width: 768px) {
+  .contactos-container {
+      padding: 1rem;
+  }
+
+  .contactos-content {
+      padding: 2rem;
+  }
+
+  .contactos-info h2 {
+      font-size: 2rem;
+  }
+
+  .form-row {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+  }
+
+  .leaf-decoration {
+      width: 200px;
+      height: 200px;
+  }
+}

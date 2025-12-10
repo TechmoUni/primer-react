@@ -1,0 +1,196 @@
+.inicio {
+  background-color: #faf9f6;
+}
+
+.inicio-bienvenida {
+  background: url('/public/fondo-botanico-leves-verdes_1761.jpeg') center/cover;
+  padding: 4rem 0;
+  position: relative;
+}
+
+.inicio-bienvenida::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.inicio-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.inicio-imagen {
+  width: 45%;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.inicio-imagen:hover {
+  transform: scale(1.02);
+}
+
+.inicio-texto {
+  width: 55%;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.inicio-texto h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.inicio-texto p {
+  color: #34495e;
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.servicios-destacados {
+  padding: 6rem 2rem;
+  background-color: #fff;
+}
+
+.servicios-destacados h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.servicio-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+}
+
+.servicio-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.servicio-card h3 {
+  font-family: 'Playfair Display', serif;
+  padding: 1.5rem 1.5rem 0.5rem;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.servicio-card p {
+  padding: 0 1.5rem 1.5rem;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+.compromiso-ambiental {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  padding: 6rem 2rem;
+}
+
+.compromiso-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.compromiso-content h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.compromiso-content > p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  color: #34495e;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.compromiso-puntos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.punto {
+  text-align: left;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.punto-numero {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #bdc3c7;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.punto h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.punto p {
+  color: #34495e;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .inicio-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .inicio-imagen,
+  .inicio-texto {
+    width: 100%;
+  }
+
+  .inicio-texto h2 {
+    font-size: 2rem;
+  }
+
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compromiso-puntos {
+    grid-template-columns: 1fr;
+  }
+}
