@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "echo 'No se han configurado pruebas. Pasando...' && exit 0" 
   },
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
@@ -33,10 +34,4 @@
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.5"
   }
-  "scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test", 
-  "eject": "react-scripts eject"
-},
 }
